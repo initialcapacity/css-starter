@@ -9,13 +9,21 @@
 
     --text-color: var(--black);
     --weak-text-color: var(--dark-gray);
+    --link-color: var(--primary);
     --icon-color: var(--black);
     --background-color: var(--white);
     --hover-color: var(--light-gray);
-    --border-color: var(--light-gray);
+
+    --weak-border-color: var(--light-gray);
+    --border-color: var(--dark-gray);
+
     --nav-background-color: var(--lightest-gray);
     --header-background-color: var(--primary);
     --header-text-color: var(--white);
+
+    --button-background-color: var(--primary);
+    --button-border-color: var(--primary);
+    --button-text-color: var(--white);
 
     --box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
     --header-height: 4rem;
@@ -26,10 +34,13 @@
     :root {
         --text-color: var(--white);
         --weak-text-color: var(--light-gray);
+        --link-color: var(--white);
         --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
-        --border-color: var(--darkest-gray);
+        --weak-border-color: var(--darkest-gray);
+        --border-color: var(--light-gray);
         --background-color: var(--black);
         --nav-background-color: var(--dark-gray);
+        --button-border-color: var(--white);
     }
 }

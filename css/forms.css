@@ -1,0 +1,46 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+fieldset {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+fieldset.actions {
+    justify-content: flex-end;
+}
+
+label {
+    flex: 1;
+    flex-basis: 14rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+input {
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 400;
+
+    padding: .75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}

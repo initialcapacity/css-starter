@@ -81,8 +81,37 @@
             <li>Header (top)</li>
             <li>Navigation bar (side)</li>
             <li><a href="#typography">Typography</a></li>
+            <li><a href="#forms">Forms</a></li>
         </ol>
     </section>
+
+    <section id="forms">
+        <h1>Forms</h1>
+
+        <form action="#">
+            <fieldset>
+                <label>
+                    Name
+                    <input type="text" required name="name">
+                </label>
+                <label>
+                    Phone
+                    <input type="text" required name="phone">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>
+                    Email
+                    <input type="email" required name="email">
+                </label>
+            </fieldset>
+            <fieldset class="actions">
+                <button class="secondary" type="button">Cancel</button>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+
 </main>
 <script>
     const toggleMenu = () => document.querySelector('body').classList.toggle('menu-open');

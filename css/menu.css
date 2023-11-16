@@ -41,7 +41,7 @@ nav a:hover {
 
     nav {
         grid-area: unset;
-        position: fixed;
+        position: absolute;
         width: var(--nav-width);
         top: var(--header-height);
         bottom: 0;
