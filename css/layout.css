@@ -26,8 +26,9 @@ header > * {
     gap: 1rem;
 }
 
-header img {
-    height: 2rem;
+header svg {
+    width: 2rem;
+    --icon-color: var(--header-text-color);
 }
 
 header h1 {
@@ -51,6 +52,7 @@ nav > * {
     padding: 0 1rem;
     display: flex;
     align-items: center;
+    gap: .75rem;
 }
 
 nav h2 {
@@ -62,8 +64,13 @@ nav h2 {
 }
 
 nav a, nav a:visited {
-    color: var(--text-color);
+    color: var(--weak-text-color);
     text-decoration: none;
+}
+
+nav svg {
+    color: var(--weak-text-color);
+    width: 1rem;
 }
 
 nav a:hover {

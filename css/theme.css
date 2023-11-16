@@ -8,6 +8,8 @@
     --primary: #3C91E6;
 
     --text-color: var(--black);
+    --weak-text-color: var(--dark-gray);
+    --icon-color: var(--black);
     --background-color: var(--white);
     --hover-color: var(--light-gray);
     --border-color: var(--light-gray);
@@ -21,6 +23,8 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --text-color: var(--white);
+        --weak-text-color: var(--light-gray);
+        --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
         --border-color: var(--darkest-gray);
         --background-color: var(--black);
