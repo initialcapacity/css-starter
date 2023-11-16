@@ -1,7 +1,4 @@
 body {
-    --header-height: 4rem;
-    --nav-width: 20rem;
-
     min-height: 100vh;
 
     display: grid;
@@ -54,90 +51,12 @@ nav {
     border-right: 1px solid var(--border-color);
 }
 
-nav > * {
-    height: 2.5rem;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-}
-
-nav h2 {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: .9rem;
-    align-items: flex-end;
-    padding-bottom: .25rem;
-}
-
-nav a, nav a:visited {
-    color: var(--weak-text-color);
-    text-decoration: none;
-}
-
-nav svg {
-    color: var(--weak-text-color);
-    width: 1rem;
-}
-
-nav a:hover {
-    background-color: var(--hover-color);
-}
-
-.menu-toggle {
-    display: none;
-}
-
 main {
     grid-area: main;
 }
 
-@media screen and (max-width: 800px){
-    body {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        grid-area: unset;
-        position: fixed;
-        width: var(--nav-width);
-        top: var(--header-height);
-        bottom: 0;
-        left: calc(-1 * var(--nav-width));
-        transition: .1s ease-in-out;
-    }
-
-    header .heading {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 2rem;
-        width: 2rem;
-        user-select: none;
-    }
-
-    .menu-toggle svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    .menu-toggle svg.close {
-        display: none;
-    }
-
-    .menu-open nav {
-        left: 0;
-    }
-
-    .menu-open .menu-toggle svg.close {
-        display: initial;
-    }
-
-    .menu-open .menu-toggle svg.open {
-        display: none;
-    }
+section {
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }

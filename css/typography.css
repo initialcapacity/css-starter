@@ -5,6 +5,47 @@ html {
     background-color: var(--background-color);
 }
 
-*,:after,:before {
+*, :after, :before {
     box-sizing: border-box
 }
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p, li {
+    line-height: 1.5;
+}
+
+h1, h2, h3, p:not(:last-child), ul:not(:last-child) , ol:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+ol, ul {
+    padding-left: 2rem;
+}
+
+ol li, ul li {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: disc
+}
+
+ol {
+    list-style: decimal;
+}
+
