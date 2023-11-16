@@ -1,9 +1,12 @@
 body {
+    --header-height: 4rem;
+    --nav-width: 20rem;
+
     min-height: 100vh;
 
     display: grid;
-    grid-template-columns: 20rem 1fr;
-    grid-template-rows: 4rem 1fr;
+    grid-template-columns: var(--nav-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr;
     grid-template-areas: 'header header'
                          'sidebar main';
 }
@@ -11,7 +14,6 @@ body {
 header {
     color: var(--header-text-color);
     background-color: var(--header-background-color);
-    box-shadow: var(--box-shadow);
     grid-area: header;
 
     display: flex;
@@ -27,8 +29,13 @@ header > * {
 }
 
 header svg {
-    width: 2rem;
+    width: 1.5rem;
+    flex-shrink: 0;
     --icon-color: var(--header-text-color);
+}
+
+header svg.logo {
+    width: 2rem;
 }
 
 header h1 {
@@ -77,6 +84,60 @@ nav a:hover {
     background-color: var(--hover-color);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 main {
     grid-area: main;
+}
+
+@media screen and (max-width: 800px){
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        grid-area: unset;
+        position: fixed;
+        width: var(--nav-width);
+        top: var(--header-height);
+        bottom: 0;
+        left: calc(-1 * var(--nav-width));
+        transition: .1s ease-in-out;
+    }
+
+    header .heading {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        width: 2rem;
+        user-select: none;
+    }
+
+    .menu-toggle svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-toggle svg.close {
+        display: none;
+    }
+
+    .menu-open nav {
+        left: 0;
+    }
+
+    .menu-open .menu-toggle svg.close {
+        display: initial;
+    }
+
+    .menu-open .menu-toggle svg.open {
+        display: none;
+    }
 }

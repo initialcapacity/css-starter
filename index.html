@@ -7,7 +7,31 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<nav>
+<header>
+    <div class="heading">
+        <svg class="logo">
+            <use xlink:href="images/logo.svg#icon"></use>
+        </svg>
+        <h1>CSS Starter</h1>
+    </div>
+    <div class="menu-toggle" data-menu-toggle>
+        <svg class="open">
+            <use xlink:href="images/menu.svg#icon"></use>
+        </svg>
+        <svg class="close">
+            <use xlink:href="images/close.svg#icon"></use>
+        </svg>
+    </div>
+    <div>
+        test@example.com
+        <a href="#">
+            <svg>
+                <use xlink:href="images/log-out.svg#icon"></use>
+            </svg>
+        </a>
+    </div>
+</header>
+<nav data-menu>
     <h2>Widgets</h2>
     <a href="#">
         <svg>
@@ -42,18 +66,13 @@
         Settings
     </a>
 </nav>
-<header>
-    <div>
-        <svg>
-            <use xlink:href="images/logo.svg#icon"></use>
-        </svg>
-        <h1>CSS Starter</h1>
-    </div>
-    <div>
-        test@example.com
-        <a href="#">sign out</a>
-    </div>
-</header>
 <main></main>
+<script>
+    const toggleMenu = () => document.querySelector('body').classList.toggle('menu-open');
+
+    document.querySelectorAll('[data-menu-toggle]').forEach(element => {
+        element.addEventListener('click', toggleMenu);
+    });
+</script>
 </body>
 </html>
