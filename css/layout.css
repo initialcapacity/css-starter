@@ -1,0 +1,75 @@
+body {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: 4rem 1fr;
+    grid-template-areas: 'header header'
+                         'sidebar main';
+}
+
+header {
+    color: var(--header-text-color);
+    background-color: var(--header-background-color);
+    box-shadow: var(--box-shadow);
+    grid-area: header;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+header > * {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header img {
+    height: 2rem;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+header a, header a:visited {
+    color: var(--header-text-color)
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    grid-area: sidebar;
+    border-right: 1px solid var(--border-color);
+}
+
+nav > * {
+    height: 2.5rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .9rem;
+    align-items: flex-end;
+    padding-bottom: .25rem;
+}
+
+nav a, nav a:visited {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+main {
+    grid-area: main;
+}
