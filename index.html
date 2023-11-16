@@ -96,13 +96,31 @@
                 </label>
                 <label>
                     Phone
-                    <input type="text" required name="phone">
+                    <input type="tel" required name="phone">
+                </label>
+                <label>
+                    Type
+                    <select name="phone-type">
+                        <option value="mobile">Mobile</option>
+                        <option value="home">Home</option>
+                        <option value="work">Work</option>
+                    </select>
                 </label>
             </fieldset>
             <fieldset>
                 <label>
                     Email
                     <input type="email" required name="email">
+                </label>
+                <label>
+                    Password
+                    <input type="password" required name="password">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label class="checkbox">
+                    <input type="checkbox" name="terms-and-conditions">
+                    <span>I agree to the <a href="#">terms and conditions</a></span>
                 </label>
             </fieldset>
             <fieldset class="actions">

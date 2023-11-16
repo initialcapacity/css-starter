@@ -28,19 +28,40 @@ label {
     cursor: pointer;
 }
 
-input {
+label.checkbox {
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: none;
+    gap: .75rem;
+    user-select: none;
+}
+
+input, select {
     font-size: 1rem;
     text-transform: none;
     font-weight: 400;
 
     padding: .75rem;
     border: 1px solid var(--border-color);
-    border-radius: 0;
+    border-radius: var(--border-radius);
     color: var(--text-color);
     background-color: var(--background-color);
 }
 
-input:focus {
-    outline: none;
-    border-color: var(--primary);
+select {
+    padding-right: 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: var(--expand-image);
+    background-repeat: no-repeat;
+    background-position: right .5rem center;
+}
+
+input[type=checkbox] {
+    margin: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-color: var(--border-color);
 }

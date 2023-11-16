@@ -16,6 +16,7 @@
 
     --weak-border-color: var(--light-gray);
     --border-color: var(--dark-gray);
+    --border-radius: .25rem;
 
     --nav-background-color: var(--lightest-gray);
     --header-background-color: var(--primary);
@@ -28,6 +29,11 @@
     --box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
     --header-height: 4rem;
     --nav-width: 16rem;
+    --expand-image: url("../images/expand-black.svg");
+}
+
+html {
+    accent-color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,5 +48,6 @@
         --background-color: var(--black);
         --nav-background-color: var(--dark-gray);
         --button-border-color: var(--white);
+        --expand-image: url("../images/expand-white.svg");
     }
 }
