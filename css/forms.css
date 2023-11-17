@@ -1,7 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 form:not(:last-child) {
@@ -10,13 +10,12 @@ form:not(:last-child) {
 
 fieldset {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
 fieldset.vertical {
     flex-direction: column;
-    gap: 1rem;
 }
 
 fieldset.actions {
