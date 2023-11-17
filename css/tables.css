@@ -1,3 +1,11 @@
+.table-scroll-wrapper {
+    overflow-x: scroll;
+}
+
+table {
+    min-width: 0;
+}
+
 th, td {
     padding: .75rem 1.5rem;
     border-color: var(--weak-border-color);

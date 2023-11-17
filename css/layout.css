@@ -54,6 +54,7 @@ nav {
 
 main {
     grid-area: main;
+    min-width: 13rem;
 }
 
 section {

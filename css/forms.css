@@ -4,6 +4,10 @@ form {
     gap: 2rem;
 }
 
+form:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
 fieldset {
     display: flex;
     gap: 2rem;
@@ -17,6 +21,10 @@ fieldset.vertical {
 
 fieldset.actions {
     justify-content: flex-end;
+}
+
+fieldset button, fieldset .button {
+    align-self: flex-end;
 }
 
 label {

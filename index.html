@@ -82,6 +82,7 @@
             <li>Navigation bar (side)</li>
             <li><a href="#typography">Typography</a></li>
             <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
         </ol>
     </section>
 
@@ -135,28 +136,38 @@
                 <button type="submit">Submit</button>
             </fieldset>
         </form>
+
+        <h2>Inline form</h2>
+        <form action="#">
+            <fieldset>
+                <label>
+                    Search
+                    <input type="search" name="query">
+                </label>
+                <button type="submit">Search</button>
+            </fieldset>
+        </form>
     </section>
-    <section>
+    <section id="tables">
         <h1>Tables</h1>
-        <table>
-            <thead>
+        <div class="table-scroll-wrapper">
+            <table>
+                <thead>
                 <tr>
                     <th></th>
                     <th>Heading</th>
                     <th>Heading</th>
                     <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr>
                     <th>Row</th>
                     <td>Cell</td>
                     <td>Cell</td>
                     <td>Cell</td>
-                </tr>
-                <tr>
-                    <th>Row</th>
-                    <td>Cell</td>
                     <td>Cell</td>
                     <td>Cell</td>
                 </tr>
@@ -165,17 +176,30 @@
                     <td>Cell</td>
                     <td>Cell</td>
                     <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
                 </tr>
-            </tbody>
-            <tfoot>
+                <tr>
+                    <th>Row</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                </tbody>
+                <tfoot>
                 <tr>
                     <th>Total</th>
                     <th>Total</th>
                     <th>Total</th>
                     <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
                 </tr>
-            </tfoot>
-        </table>
+                </tfoot>
+            </table>
+        </div>
     </section>
 </main>
 <script>
