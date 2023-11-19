@@ -17,7 +17,7 @@
         </svg>
         <h1>CSS Starter</h1>
     </div>
-    <div class="menu-toggle" data-menu-toggle>
+    <div class="menu-toggle" onclick="document.querySelector('body').classList.toggle('menu-open')">
         <svg class="open">
             <use xlink:href="images/menu.svg#icon"></use>
         </svg>
@@ -226,12 +226,5 @@
         <p>Click <a href="javascript:document.querySelector('dialog').showModal()">here</a> to open the modal</p>
     </section>
 </main>
-<script>
-    const toggleMenu = () => document.querySelector('body').classList.toggle('menu-open');
-
-    document.querySelectorAll('[data-menu-toggle]').forEach(element => {
-        element.addEventListener('click', toggleMenu);
-    });
-</script>
 </body>
 </html>
