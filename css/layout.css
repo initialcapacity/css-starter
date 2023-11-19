@@ -9,7 +9,7 @@ body {
                          'sidebar main';
 }
 
-header {
+body > header {
     color: var(--header-text-color);
     background-color: var(--header-background-color);
     grid-area: header;
@@ -20,29 +20,29 @@ header {
     padding: 0 1rem;
 }
 
-header > * {
+body > header > * {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-header svg {
+body > header svg {
     width: 1.5rem;
     flex-shrink: 0;
     --icon-color: var(--header-text-color);
 }
 
-header svg.logo {
+body > header svg.logo {
     width: 2rem;
 }
 
-header h1 {
+body > header h1 {
     font-weight: 700;
     font-size: 1.2rem;
     margin: 0;
 }
 
-header a, header a:visited {
+body > header a, header a:visited {
     color: var(--header-text-color)
 }
 
@@ -63,4 +63,26 @@ section {
 
 section:not(:last-child) {
     border-bottom: 1px solid var(--weak-border-color);
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header'
+                             'main';
+    }
+
+    nav {
+        grid-area: unset;
+        position: absolute;
+        width: var(--nav-width);
+        top: var(--header-height);
+        bottom: 0;
+        left: calc(-1 * var(--nav-width));
+        transition: .1s ease-in-out;
+    }
+
+    body > header .heading {
+        display: none;
+    }
 }

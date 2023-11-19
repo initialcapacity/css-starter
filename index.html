@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>CSS Starter</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml"/>
 </head>
 <body>
 <header>
@@ -86,6 +86,7 @@
             <li><a href="#typography">Typography</a></li>
             <li><a href="#forms">Forms</a></li>
             <li><a href="#tables">Tables</a></li>
+            <li><a href="#modals">Modals</a></li>
         </ol>
     </section>
 
@@ -203,6 +204,26 @@
                 </tfoot>
             </table>
         </div>
+    </section>
+
+    <section id="modals">
+        <h1>Modals</h1>
+
+        <dialog>
+            <article>
+                <h2>Warning</h2>
+                Are you absolutely sure?
+            </article>
+            <footer>
+                <form method="dialog">
+                    <fieldset class="actions">
+                        <button class="secondary" value="no">No</button>
+                        <button value="yes">Yes</button>
+                    </fieldset>
+                </form>
+            </footer>
+        </dialog>
+        <p>Click <a href="javascript:document.querySelector('dialog').showModal()">here</a> to open the modal</p>
     </section>
 </main>
 <script>

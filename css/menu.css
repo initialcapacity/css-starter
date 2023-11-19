@@ -35,26 +35,6 @@ nav a:hover {
 }
 
 @media screen and (max-width: 800px){
-    body {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'header'
-                             'main';
-    }
-
-    nav {
-        grid-area: unset;
-        position: absolute;
-        width: var(--nav-width);
-        top: var(--header-height);
-        bottom: 0;
-        left: calc(-1 * var(--nav-width));
-        transition: .1s ease-in-out;
-    }
-
-    header .heading {
-        display: none;
-    }
-
     .menu-toggle {
         display: flex;
         align-items: center;
