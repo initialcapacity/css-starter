@@ -42,6 +42,7 @@ nav a:hover {
         height: 2rem;
         width: 2rem;
         user-select: none;
+        cursor: pointer;
     }
 
     .menu-toggle svg {
