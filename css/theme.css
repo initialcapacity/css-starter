@@ -14,6 +14,9 @@
     --background-color: var(--white);
     --hover-color: var(--light-gray);
 
+    --inverted-background-color: var(--dark-gray);
+    --inverted-text-color: var(--white);
+
     --weak-border-color: var(--light-gray);
     --border-color: var(--dark-gray);
     --border-radius: .25rem;
@@ -28,7 +31,9 @@
 
     --box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
     --header-height: 4rem;
+    --footer-height: 16rem;
     --nav-width: 16rem;
+    --inverted-ic-logo: url("../images/ic-logo-white.svg");
     --expand-image: url("../images/expand-black.svg");
 }
 
@@ -43,11 +48,17 @@ html {
         --link-color: var(--white);
         --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
+
+        --inverted-background-color: var(--light-gray);
+        --inverted-text-color: var(--black);
+
         --weak-border-color: var(--darkest-gray);
         --border-color: var(--light-gray);
         --background-color: var(--black);
         --nav-background-color: var(--dark-gray);
         --button-border-color: var(--white);
+
+        --inverted-ic-logo: url("../images/ic-logo-black.svg");
         --expand-image: url("../images/expand-white.svg");
     }
 }
