@@ -20,20 +20,36 @@ body > header {
     padding: 0 1rem;
 }
 
-body > header > * {
+body > header ul {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    padding: 0;
+    list-style: none;
+}
+
+body > header ul:not(:last-child) {
+    margin: 0;
+}
+
+body > header li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    line-height: 1;
 }
 
 body > header svg {
     width: 1.5rem;
+    height: 1.5rem;
     flex-shrink: 0;
     --icon-color: var(--header-text-color);
 }
 
 body > header svg.logo {
     width: 2rem;
+    height: 2rem;
 }
 
 body > header h1 {

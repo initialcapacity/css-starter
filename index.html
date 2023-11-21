@@ -14,28 +14,38 @@
 </head>
 <body>
 <header>
-    <div class="heading">
-        <svg class="logo">
-            <use xlink:href="images/logo.svg#icon"></use>
-        </svg>
-        <h1>CSS Starter</h1>
-    </div>
-    <div class="menu-toggle" onclick="document.querySelector('body').classList.toggle('menu-open')">
-        <svg class="open">
-            <use xlink:href="images/menu.svg#icon"></use>
-        </svg>
-        <svg class="close">
-            <use xlink:href="images/close.svg#icon"></use>
-        </svg>
-    </div>
-    <div>
-        test@example.com
-        <a href="#" aria-label="log out">
-            <svg>
-                <use xlink:href="images/log-out.svg#icon"></use>
+    <ul class="heading">
+        <li>
+            <svg class="logo">
+                <use xlink:href="images/logo.svg#icon"></use>
             </svg>
-        </a>
-    </div>
+        </li>
+        <li>
+            <h1>CSS Starter</h1>
+        </li>
+    </ul>
+    <ul class="menu-toggle" onclick="document.querySelector('body').classList.toggle('menu-open')">
+        <li>
+            <svg class="open">
+                <use xlink:href="images/menu.svg#icon"></use>
+            </svg>
+            <svg class="close">
+                <use xlink:href="images/close.svg#icon"></use>
+            </svg>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            test@example.com
+        </li>
+        <li>
+            <a href="#" aria-label="log out">
+                <svg>
+                    <use xlink:href="images/log-out.svg#icon"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
 </header>
 <nav>
     <h2>Widgets</h2>
