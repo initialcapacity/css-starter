@@ -1,5 +1,5 @@
 nav {
-    padding: 2rem 0;
+    padding: var(--body-padding) 0;
 }
 
 nav ul {
@@ -16,7 +16,7 @@ nav li {
 
 nav li a {
     height: 2.5rem;
-    padding: 0 2rem;
+    padding: 0 var(--body-padding);
     display: flex;
     align-items: center;
     gap: .75rem;

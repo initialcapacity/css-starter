@@ -18,7 +18,7 @@ body > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 var(--body-padding);
 }
 
 body > header ul {
@@ -75,7 +75,7 @@ main {
 }
 
 section {
-    padding: 2rem;
+    padding: var(--body-padding);
 }
 
 section:not(:last-child) {
@@ -83,7 +83,7 @@ section:not(:last-child) {
 }
 
 footer {
-    padding: 2rem;
+    padding: var(--body-padding);
     grid-area: footer;
 
     display: flex;
@@ -94,7 +94,7 @@ footer {
     background-color: var(--inverted-background-color);
     background-image: var(--inverted-ic-logo);
     background-repeat: no-repeat;
-    background-position: right 2rem center;
+    background-position: right var(--body-padding) center;
 }
 
 footer a, footer a:visited {
