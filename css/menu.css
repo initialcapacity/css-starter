@@ -1,4 +1,20 @@
-nav > * {
+nav {
+    padding: 2rem 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav li a {
     height: 2.5rem;
     padding: 0 2rem;
     display: flex;
@@ -10,10 +26,8 @@ nav h2 {
     font-weight: 700;
     text-transform: uppercase;
     font-size: .9rem;
-    align-items: flex-end;
-    height: fit-content;
-    margin-top: 2rem;
     margin-bottom: .25rem;
+    padding: 0 2rem;
 }
 
 nav a, nav a:visited {
