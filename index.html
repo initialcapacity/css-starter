@@ -91,6 +91,14 @@
                 Modals
             </a>
         </li>
+        <li>
+            <a href="#tooltips">
+                <svg>
+                    <use xlink:href="images/tooltip.svg#icon"></use>
+                </svg>
+                Tooltips
+            </a>
+        </li>
     </ul>
 
     <h2>Profile</h2>
@@ -123,7 +131,7 @@
     </section>
 
     <section id="typography">
-        <h2>Typography</h2>
+        <h1>Typography</h1>
 
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -284,6 +292,19 @@
             </footer>
         </dialog>
         <p>Click <a href="javascript:document.querySelector('dialog').showModal()">here</a> to open the modal</p>
+    </section>
+    <section id="tooltips">
+        <h1>Tooltips</h1>
+
+        <p>
+            <a href="javascript:{}" data-tooltip="Here is some additional info">Hover over me</a> to see a tooltip.
+        </p>
+
+        <p>
+            <a href="javascript:{}" data-tooltip="Here is some additional info. What do you think of it? I'd say it's very nice.">
+                Hover over me
+            </a> to see a tooltip with a ton of text.
+        </p>
     </section>
 </main>
 <footer>
