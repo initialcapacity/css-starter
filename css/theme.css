@@ -1,12 +1,10 @@
 :root {
     --white: #FFFFFF;
-    --transparent-white: #FFFFFFDD;
     --lightest-gray: #FAFAFA;
     --light-gray: #EDEDED;
     --dark-gray: #4D4D4D;
     --darkest-gray: #454545;
     --black: #333333;
-    --transparent-black: #333333DD;
     --primary: #196EC2;
 
     --text-color: var(--black);
@@ -65,8 +63,8 @@ html {
         --nav-background-color: var(--dark-gray);
         --button-border-color: var(--white);
 
-        --dropdown-menu-background: var(--transparent-black);
-        --dropdown-menu-hover: var(--black);
+        --dropdown-menu-background: var(--black);
+        --dropdown-menu-hover: var(--darkest-gray);
 
         --inverted-ic-logo: url("../images/ic-logo-black.svg");
         --expand-image: url("../images/expand-white.svg");
