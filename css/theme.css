@@ -1,10 +1,12 @@
 :root {
     --white: #FFFFFF;
+    --transparent-white: #FFFFFFDD;
     --lightest-gray: #FAFAFA;
     --light-gray: #EDEDED;
     --dark-gray: #4D4D4D;
     --darkest-gray: #454545;
     --black: #333333;
+    --transparent-black: #333333DD;
     --primary: #196EC2;
 
     --text-color: var(--black);
@@ -29,13 +31,17 @@
     --button-border-color: var(--primary);
     --button-text-color: var(--white);
 
-    --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+    --dropdown-menu-background: var(--white);
+    --dropdown-menu-hover: var(--lightest-gray);
+    --dropdown-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+
     --header-height: 5rem;
     --body-padding: 2rem;
     --footer-height: 16rem;
     --nav-width: 16rem;
     --inverted-ic-logo: url("../images/ic-logo-white.svg");
     --expand-image: url("../images/expand-black.svg");
+    --white-expand-image: url("../images/expand-white.svg");
 }
 
 html {
@@ -58,6 +64,9 @@ html {
         --background-color: var(--black);
         --nav-background-color: var(--dark-gray);
         --button-border-color: var(--white);
+
+        --dropdown-menu-background: var(--transparent-black);
+        --dropdown-menu-hover: var(--black);
 
         --inverted-ic-logo: url("../images/ic-logo-black.svg");
         --expand-image: url("../images/expand-white.svg");

@@ -1,0 +1,50 @@
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown .button {
+    text-transform: none;
+    text-decoration: none;
+    padding-right: 2.25rem;
+    background-image: var(--white-expand-image);
+    background-repeat: no-repeat;
+    background-position: right .5rem center;
+}
+
+.dropdown ul.menu {
+    display: none;
+    visibility: hidden;
+
+    width: max-content;
+    max-width: 14rem;
+    box-shadow: var(--dropdown-box-shadow);
+    background-color: var(--dropdown-menu-background);
+}
+
+.dropdown .menu a {
+    padding: .75rem 1rem;
+    width: 100%;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.dropdown .menu a:hover {
+    background-color: var(--dropdown-menu-hover);
+}
+
+.dropdown:focus-within .button, .dropdown:hover .button,
+.dropdown:focus-within button, .dropdown:hover button {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.dropdown:focus-within .menu, .dropdown:hover .menu {
+    visibility: visible;
+    display: block;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+}

@@ -14,18 +14,16 @@
 </head>
 <body>
 <header>
-    <ul class="heading">
-        <li>
+    <ul>
+        <li class="heading">
             <svg class="logo">
                 <use xlink:href="images/logo.svg#icon"></use>
             </svg>
         </li>
-        <li>
+        <li class="heading">
             <h1>CSS Starter</h1>
         </li>
-    </ul>
-    <ul class="menu-toggle" onclick="document.querySelector('body').classList.toggle('menu-open')">
-        <li>
+        <li class="menu-toggle" onclick="document.querySelector('body').classList.toggle('menu-open')">
             <svg class="open">
                 <use xlink:href="images/menu.svg#icon"></use>
             </svg>
@@ -33,11 +31,22 @@
                 <use xlink:href="images/close.svg#icon"></use>
             </svg>
         </li>
+        <li class="dropdown">
+            <a href="#" class="button" aria-haspopup="true">
+                <svg>
+                    <use xlink:href="images/account.svg#icon"></use>
+                </svg>
+
+                My account
+            </a>
+
+            <ul class="menu" aria-label="submenu">
+                <li><a href="#">Another account</a></li>
+                <li><a href="#">Some other account</a></li>
+            </ul>
+        </li>
     </ul>
     <ul>
-        <li>
-            test@example.com
-        </li>
         <li>
             <a href="#" aria-label="log out">
                 <svg>
@@ -82,9 +91,9 @@
         <li>
             <a href="#">
                 <svg>
-                    <use xlink:href="images/account.svg#icon"></use>
+                    <use xlink:href="images/person.svg#icon"></use>
                 </svg>
-                Account
+                test@example.com
             </a>
         </li>
         <li>
