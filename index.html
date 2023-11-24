@@ -301,7 +301,8 @@
         </p>
 
         <p>
-            <a href="javascript:{}" data-tooltip="Here is some additional info. What do you think of it? I'd say it's very nice.">
+            <a href="javascript:{}"
+               data-tooltip="Here is some additional info. What do you think of it? I'd say it's very nice.">
                 Hover over me
             </a> to see a tooltip with a ton of text.
         </p>
@@ -318,5 +319,11 @@
         Initial Capacity, Inc.
     </span>
 </footer>
+
+<script>
+    document.querySelectorAll("nav a").forEach(element => {
+        element.addEventListener("click", () => document.querySelector('body').classList.remove('menu-open'))
+    })
+</script>
 </body>
 </html>
