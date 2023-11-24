@@ -59,13 +59,8 @@ body > header h1 {
     margin: 0;
 }
 
-body > header a, body >header a:visited {
-    color: var(--header-text-color)
-}
-
 body > header .button, body > header button {
     --background: var(--header-background-color);
-    --color: var(--header-text-color);
     --border: var(--header-text-color);
 }
 

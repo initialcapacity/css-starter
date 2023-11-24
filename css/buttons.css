@@ -1,6 +1,6 @@
 button, .button {
     --background: var(--button-background-color);
-    --color: var(--button-text-color);
+    --text-color: var(--button-text-color);
     --border: var(--button-border-color);
 
     display: flex;
@@ -13,13 +13,17 @@ button, .button {
     border-radius: var(--border-radius);
 
     cursor: pointer;
-    color: var(--color);
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
+a.button {
+    color: var(--text-color);
+}
+
 button.secondary, .button.secondary {
     --background: var(--background-color);
-    --color: var(--button-border-color);
+    --text-color: var(--button-border-color);
 }
