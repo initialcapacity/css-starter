@@ -2,7 +2,7 @@ button, .button {
     --background: var(--button-background-color);
     --text-color: var(--button-text-color);
     --border: var(--button-border-color);
-    --loader: var(--button-loader);
+    --loader: var(--button-loader-primary);
 
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ button.loading, .button.loading {
 button.secondary, .button.secondary {
     --background: var(--background-color);
     --text-color: var(--button-border-color);
-    --loader: var(--button-loader-primary);
+    --loader: var(--button-loader-secondary);
 }
 
 button.alert, .button.alert {

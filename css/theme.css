@@ -26,16 +26,19 @@
     --header-background-color: var(--primary);
     --header-text-color: var(--white);
 
+    --card-background-color: var(--lightest-gray);
+
     --button-background-color: var(--primary);
     --button-border-color: var(--primary);
     --button-text-color: var(--white);
     --button-alert-color: var(--alert);
-    --button-loader: url("../images/loader-white.svg");
-    --button-loader-primary: url("../images/loader-primary.svg");
+    --button-loader-primary: url("../images/loader-white.svg");
+    --button-loader-secondary: url("../images/loader-primary.svg");
+
+    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 
     --dropdown-menu-background: var(--white);
     --dropdown-menu-hover: var(--lightest-gray);
-    --dropdown-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
 
     --header-height: 5rem;
     --body-padding: 2rem;
@@ -66,6 +69,10 @@ html {
         --background-color: var(--black);
         --nav-background-color: var(--dark-gray);
         --button-border-color: var(--white);
+
+        --button-loader-secondary: url("../images/loader-white.svg");
+
+        --card-background-color: var(--darkest-gray);
 
         --dropdown-menu-background: var(--black);
         --dropdown-menu-hover: var(--darkest-gray);
