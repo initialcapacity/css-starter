@@ -6,6 +6,7 @@
     --darkest-gray: #454545;
     --black: #333333;
     --primary: #196EC2;
+    --alert: #E54B4B;
 
     --text-color: var(--black);
     --weak-text-color: var(--dark-gray);
@@ -28,6 +29,9 @@
     --button-background-color: var(--primary);
     --button-border-color: var(--primary);
     --button-text-color: var(--white);
+    --button-alert-color: var(--alert);
+    --button-loader: url("../images/loader-white.svg");
+    --button-loader-primary: url("../images/loader-primary.svg");
 
     --dropdown-menu-background: var(--white);
     --dropdown-menu-hover: var(--lightest-gray);
