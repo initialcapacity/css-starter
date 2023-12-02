@@ -49,8 +49,8 @@ body > header svg {
 }
 
 body > header svg.logo {
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 3rem;
 }
 
 body > header h1 {

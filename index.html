@@ -31,6 +31,8 @@
                 <use xlink:href="images/icons.svg#close"></use>
             </svg>
         </li>
+    </ul>
+    <ul>
         <li class="dropdown">
             <a href="#" class="button" aria-haspopup="true">
                 <svg>
@@ -45,8 +47,6 @@
                 <li><a href="#">Some other account</a></li>
             </ul>
         </li>
-    </ul>
-    <ul>
         <li>
             <a href="#" aria-label="log out">
                 <svg>
@@ -57,7 +57,7 @@
     </ul>
 </header>
 <nav>
-    <h2>Sections</h2>
+    <h2>Components</h2>
     <ul>
         <li>
             <a href="#typography">
@@ -115,24 +115,32 @@
                 Buttons
             </a>
         </li>
+        <li>
+            <a href="#code">
+                <svg>
+                    <use xlink:href="images/icons.svg#code"></use>
+                </svg>
+                Code
+            </a>
+        </li>
     </ul>
 
-    <h2>Profile</h2>
+    <h2>Patterns</h2>
     <ul>
         <li>
-            <a href="#">
+            <a href="#theming">
                 <svg>
-                    <use xlink:href="images/icons.svg#person"></use>
+                    <use xlink:href="images/icons.svg#palette"></use>
                 </svg>
-                test@example.com
+                Theming
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#icons">
                 <svg>
-                    <use xlink:href="images/icons.svg#settings"></use>
+                    <use xlink:href="images/icons.svg#image"></use>
                 </svg>
-                Settings
+                Icons
             </a>
         </li>
     </ul>
@@ -163,6 +171,7 @@
             <li><a href="https://css-tricks.com/guides/">CSS Tricks</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs</a></li>
             <li><a href="https://web.dev/patterns/layout">web.dev</a></li>
+            <li><a href="https://www.htmhell.dev/tips/">HTMHell</a></li>
         </ul>
     </section>
 
@@ -394,7 +403,7 @@
             <button class="loading">Primary</button>
             <button>
                 <svg>
-                    <use xlink:href="images/icons.svg#settings"></use>
+                    <use xlink:href="images/icons.svg#table"></use>
                 </svg>
                 Primary
             </button>
@@ -415,6 +424,97 @@
                 Alert
             </button>
         </fieldset>
+    </section>
+    <section id="code">
+        <h1>Code</h1>
+
+        <p>
+            Code can be displayed inline with the <code>&lt;code&gt;</code> tag, or in a block
+        </p>
+
+        <pre><code>like this,
+with &lt;pre&gt; and &lt;code&gt;</code></pre>
+    </section>
+    <section id="theming">
+        <h1>Theming</h1>
+
+        <p>
+            The <a href="./css/theme.css">theme.css</a> file contains colors, icons, and other variables that make up
+            this site's theme.
+        </p>
+
+        <p>
+            Theme variables are defined on <code>:root</code> so they can be used in all elements.
+            Color variables are at the top of the <code>:root</code> styles. These define all colors to be used in the
+            CSS files. Color variables must only be used in the theme file, and should not be imported from other CSS
+            files.
+        </p>
+
+        <p>
+            Below the color variable we define variables like <code>--text-color</code> and <code>--border-color</code>
+            that we intend to use in other CSS files. These variables should reference color variables, and define our
+            default theme. We can define an alternate theme (with <code>@media (prefers-color-scheme: dark)</code>,
+            perhaps) by overriding these variables.
+        </p>
+
+        <pre><code>:root {
+    /* Color variables */
+    --white: #EEEEEE;
+    --black: #333333;
+
+    /* Default theme variables */
+    --text-color: var(--black);
+    --background-color: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark theme variables */
+        --text-color: var(--white);
+        --background-color: var(--black);
+    }
+}</code></pre>
+    </section>
+
+    <section id="icons">
+        <h1>Icons</h1>
+
+        <p>
+            Use SVG icons whenever possible and practical. They can scale to any size, accept
+            CSS styles, and are usually smaller that other image formats.
+        </p>
+
+        <h2>Variables</h2>
+        <p>
+            To use our theme's CSS variables in SVG icons, we have to include SVGs into the page a bit differently.
+            The usual method on an image tag doesn't work, because the SVGs aren't a part of the DOM.
+        </p>
+
+        <pre><code>&lt;img src="/images/spinner.svg" alt="loading"&gt;</code></pre>
+
+        <p>
+            Instead, we must include the full SVG directly with an <code>&lt;svg&gt;</code> tag or reference from an
+            <code>&lt;svg&gt;</code> tag using a <code>&lt;use&gt;</code> tag.
+        </p>
+
+        <pre><code>&lt;svg&gt;
+    &lt;use xlink:href="/images/spinner.svg#icon"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+
+        <p>
+            This ensures that the SVG is a part of the DOM, so will be able to use our CSS variables. If we use our
+            theme's CSS variables to style our SVGs we'll be able to use the same icons for different themes (light and
+            dark mode, for example).
+        </p>
+
+        <h2>Sprites</h2>
+
+        <p>
+            This site uses <a href="./images/icons.svg">an SVG sprite file</a> to include many SVGs in one file. This
+            helps a bit with performance since the browser makes fewer requests to load icons and can help when changing
+            multiple icons at once. It's very cumbersome to reference SVG sprites in a CSS file, so we use separate
+            files for SVGs referenced from CSS.
+        </p>
     </section>
 </main>
 <footer>
