@@ -12,5 +12,5 @@ dialog > article, dialog > footer {
 
 dialog > footer {
     border-top: 1px solid var(--weak-border-color);
-    background-color: var(--nav-background-color);
+    background-color: var(--card-background-color);
 }

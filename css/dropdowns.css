@@ -33,7 +33,7 @@
 }
 
 .dropdown .menu a:hover {
-    background-color: var(--dropdown-menu-hover);
+    background-color: var(--card-background-color);
 }
 
 .dropdown:focus-within .button, .dropdown:hover .button,

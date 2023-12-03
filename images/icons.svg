@@ -41,6 +41,9 @@
     <symbol id="text" viewBox="0 -960 960 960">
         <path style="fill: var(--icon-color)" d="M420-160v-520H200v-120h560v120H540v520H420Z"/>
     </symbol>
+    <svg id="toggle" viewBox="0 -960 960 960">
+        <path style="fill: var(--icon-color)" d="M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q66 0 113-47t47-113q0-66-47-113t-113-47H280q-66 0-113 47t-47 113q0 66 47 113t113 47Zm400-40q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM480-480Z"/>
+    </svg>
     <symbol id="tooltip" viewBox="0 -960 960 960">
         <path style="fill: var(--icon-color)" d="M480-80 374-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H586L480-80ZM160-320h640v-480H160v480Zm0 0v-480 480Z"/>
     </symbol>

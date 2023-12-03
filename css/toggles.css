@@ -1,0 +1,42 @@
+.toggle input {
+    --toggle-height: 2rem;
+    --toggle-width: calc(1.8 * var(--toggle-height));
+    --toggle-padding: .25rem;
+    --indicator-size: calc(var(--toggle-height) - 2 * var(--toggle-padding));
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+
+    height: var(--toggle-height);
+    width: var(--toggle-width);
+    background: var(--toggle-background-off);
+    padding: var(--toggle-padding);
+    border-radius: var(--toggle-height);
+    border: none;
+    box-shadow: var(--inset-box-shadow);
+
+    transition: 0.1s linear background;
+}
+
+.toggle input:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: var(--toggle-padding);
+    left: var(--toggle-padding);
+    width: var(--indicator-size);
+    height: var(--indicator-size);
+    background: var(--background-color);
+    border-radius: var(--indicator-size);
+    transition: 0.1s linear transform;
+    transform: translateX(0);
+    box-shadow: var(--box-shadow);
+}
+
+.toggle input:checked {
+    background-color: var(--toggle-background-on);
+}
+
+.toggle input:checked:before {
+    transform: translateX(calc(var(--toggle-width) - var(--indicator-size) - 2 * var(--toggle-padding)));
+}

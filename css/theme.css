@@ -22,11 +22,12 @@
     --border-color: var(--dark-gray);
     --border-radius: .25rem;
 
-    --nav-background-color: var(--lightest-gray);
     --header-background-color: var(--primary);
     --header-text-color: var(--white);
 
     --card-background-color: var(--lightest-gray);
+    --toggle-background-off: var(--light-gray);
+    --toggle-background-on: var(--primary);
 
     --button-background-color: var(--primary);
     --button-border-color: var(--primary);
@@ -35,12 +36,10 @@
     --button-loader-primary: url("../images/loader-white.svg");
     --button-loader-secondary: url("../images/loader-primary.svg");
 
-    --code-background: var(--lightest-gray);
-
     --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    --inset-box-shadow: 0 1px 3px rgba(0, 0, 0, .14) inset;
 
     --dropdown-menu-background: var(--white);
-    --dropdown-menu-hover: var(--lightest-gray);
 
     --header-height: 5rem;
     --body-padding: 2rem;
@@ -69,17 +68,13 @@ html {
         --weak-border-color: var(--dark-gray);
         --border-color: var(--light-gray);
         --background-color: var(--black);
-        --nav-background-color: var(--dark-gray);
         --button-border-color: var(--white);
 
         --button-loader-secondary: url("../images/loader-white.svg");
 
         --card-background-color: var(--darkest-gray);
-
         --dropdown-menu-background: var(--black);
-        --dropdown-menu-hover: var(--darkest-gray);
-
-        --code-background: var(--darkest-gray);
+        --toggle-background-off: var(--dark-gray);
 
         --inverted-ic-logo: url("../images/ic-logo-black.svg");
         --expand-image: url("../images/expand-white.svg");

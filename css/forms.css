@@ -56,11 +56,10 @@ label, legend {
     font-size: .9rem;
 }
 
-label.checkbox, label.radio {
+label.checkbox, label.radio, label.toggle {
     flex-direction: row;
     align-items: center;
     font-size: 1rem;
-    font-weight: 400;
     text-transform: none;
     gap: .75rem;
     user-select: none;

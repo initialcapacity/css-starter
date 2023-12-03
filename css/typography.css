@@ -62,7 +62,7 @@ pre, code {
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
     font-size: .9rem;
     width: 100%;
-    background-color: var(--code-background);
+    background-color: var(--card-background-color);
     border-radius: var(--border-radius);
     border: 1px solid var(--weak-border-color);
 }
