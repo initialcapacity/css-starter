@@ -26,7 +26,7 @@ h1, h2, h3 {
     margin-bottom: 1.5rem;
 }
 
-p + h1, p + h2, p + h3 {
+h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
     margin-top: 2rem;
 }
 
