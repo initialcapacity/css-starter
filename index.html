@@ -481,6 +481,8 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
             this site's theme.
         </p>
 
+        <h2>Variables</h2>
+
         <p>
             Theme variables are defined on <code>:root</code> so they can be used in all elements.
             Color variables are at the top of the <code>:root</code> styles. These define all colors to be used in the
@@ -512,6 +514,24 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
         --background-color: var(--black);
     }
 }</code></pre>
+
+        <h2>Browser theme</h2>
+
+        <p>
+            Set the <code>accent-color</code> property on the <code>html</code> tag so checkboxes and outlines match
+            your site's theme.
+        </p>
+
+        <pre><code>html {
+    accent-color: var(--primary);
+}</code></pre>
+
+        <p>
+            Add a meta tag that sets the theme color to the <code>head</code> of your document to style browser chrome
+            when a user visits your site.
+        </p>
+
+        <pre><code>&lt;meta name="theme-color" content="#196EC2"/&gt;</code></pre>
     </section>
 
     <section id="icons">
