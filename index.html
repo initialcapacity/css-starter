@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/toggles.css">
 
-    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml"/>
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml"/>
 </head>
 <body>
 <header>
@@ -163,6 +164,14 @@
                     <use xlink:href="images/icons.svg#image"></use>
                 </svg>
                 Icons
+            </a>
+        </li>
+        <li>
+            <a href="#favicon">
+                <svg>
+                    <use xlink:href="images/icons.svg#logo"></use>
+                </svg>
+                Favicon
             </a>
         </li>
     </ul>
@@ -462,7 +471,7 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
 
         <p>
             Toggles should be used for actions that take effect on click, as opposed to checkboxes, which should be used
-        for actions that take effect when a form is submitted.
+            for actions that take effect when a form is submitted.
         </p>
 
         <fieldset>
@@ -572,6 +581,19 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
             helps a bit with performance since the browser makes fewer requests to load icons and can help when changing
             multiple icons at once. It's very cumbersome to reference SVG sprites in a CSS file, so we use separate
             files for SVGs referenced from CSS.
+        </p>
+    </section>
+
+    <section id="favicon">
+        <h1>Favicon</h1>
+
+        <p>
+            This site uses an SVG favicon for modern browsers and provides an ico fallback for
+            <a href="https://caniuse.com/link-icon-svg">browsers without SVG favicon support</a> (like Safari and IE).
+            The <a href="favicon.svg">SVG favicon</a> uses a <code>@media (prefers-color-scheme: dark)</code> query to
+            serve a different color favicon depending on the user's color scheme. The
+            <a href="favicon.ico">ico favicon</a> consists of a dark icon on a light background so that it displays well
+            on any background color.
         </p>
     </section>
 </main>
