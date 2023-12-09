@@ -12,18 +12,18 @@ fieldset {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-}
 
-fieldset.vertical {
-    flex-direction: column;
-}
+    &.vertical {
+        flex-direction: column;
+    }
 
-fieldset.actions {
-    justify-content: flex-end;
-}
+    &.actions {
+        justify-content: flex-end;
+    }
 
-fieldset button, fieldset .button {
-    align-self: flex-end;
+    & button, & .button {
+        align-self: flex-end;
+    }
 }
 
 label {
@@ -35,6 +35,15 @@ label {
     gap: .5rem;
 
     cursor: pointer;
+
+    &.checkbox, &.radio, &.toggle {
+        flex-direction: row;
+        align-items: center;
+        font-size: 1rem;
+        text-transform: none;
+        gap: .75rem;
+        user-select: none;
+    }
 }
 
 legend {
@@ -54,15 +63,6 @@ label, legend {
     font-weight: 600;
     text-transform: uppercase;
     font-size: .9rem;
-}
-
-label.checkbox, label.radio, label.toggle {
-    flex-direction: row;
-    align-items: center;
-    font-size: 1rem;
-    text-transform: none;
-    gap: .75rem;
-    user-select: none;
 }
 
 input, select {

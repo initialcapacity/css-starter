@@ -19,37 +19,37 @@ button, .button {
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
-}
 
-button svg, .button svg {
-    --icon-color: var(--text-color);
+    & svg {
+        --icon-color: var(--text-color);
 
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: -.25rem;
-    flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: -.25rem;
+        flex-shrink: 0;
+    }
+
+    &.loading {
+        padding-left: 3rem;
+        background-image: var(--loader);
+        background-repeat: no-repeat;
+        background-position-x: .75rem;
+        background-position-y: center;
+        background-size: 1.5rem 1.5rem;
+    }
+
+    &.secondary {
+        --background: var(--background-color);
+        --text-color: var(--button-border-color);
+        --loader: var(--button-loader-secondary);
+    }
+
+    &.alert {
+        --background: var(--button-alert-color);
+        --border: var(--button-alert-color);
+    }
 }
 
 a.button {
     color: var(--text-color);
-}
-
-button.loading, .button.loading {
-    padding-left: 3rem;
-    background-image: var(--loader);
-    background-repeat: no-repeat;
-    background-position-x: .75rem;
-    background-position-y: center;
-    background-size: 1.5rem 1.5rem;
-}
-
-button.secondary, .button.secondary {
-    --background: var(--background-color);
-    --text-color: var(--button-border-color);
-    --loader: var(--button-loader-secondary);
-}
-
-button.alert, .button.alert {
-    --background: var(--button-alert-color);
-    --border: var(--button-alert-color);
 }

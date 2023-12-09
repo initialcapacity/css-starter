@@ -24,10 +24,10 @@ h3 {
 h1, h2, h3 {
     font-weight: 600;
     margin-bottom: 1.5rem;
-}
 
-h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
-    margin-top: 2rem;
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
 }
 
 p, li {
@@ -38,8 +38,10 @@ a, a:visited {
     color: var(--link-color);
 }
 
-p:not(:last-child), ul:not(:last-child) , ol:not(:last-child) {
-    margin-bottom: 1rem;
+p, ul, ol {
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 }
 
 ol, ul {
@@ -67,6 +69,11 @@ pre, code {
     border: 1px solid var(--weak-border-color);
 }
 
+code {
+    padding: .125rem .25rem;
+    line-height: 1.5em;
+}
+
 pre {
     padding: .5rem;
     margin-bottom: 1rem;
@@ -74,14 +81,11 @@ pre {
 
     border: 1px solid var(--weak-border-color);
     border-left-width: .5rem;
+
+    & code {
+        border: none;
+        display: block;
+    }
 }
 
-code {
-    padding: .125rem .25rem;
-    line-height: 1.5em;
-}
 
-pre code {
-    border: none;
-    display: block;
-}

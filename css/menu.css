@@ -1,54 +1,54 @@
-nav {
+body > nav {
     padding: var(--body-padding) 0;
-}
 
-nav ul {
-    display: flex;
-    flex-direction: column;
+    & ul {
+        display: flex;
+        flex-direction: column;
 
-    list-style: none;
-    padding: 0;
-}
+        list-style: none;
+        padding: 0;
+    }
 
-nav li {
-    margin: 0;
-}
+    & li {
+        margin: 0;
 
-nav li a {
-    height: 2.5rem;
-    padding: 0 var(--body-padding);
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-}
+        & a {
+            height: 2.5rem;
+            padding: 0 var(--body-padding);
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+    }
 
-nav h2 {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: .9rem;
-    margin-bottom: .25rem;
-    padding: 0 2rem;
-}
+    & h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .9rem;
+        margin-bottom: .25rem;
+        padding: 0 2rem;
+    }
 
-nav a, nav a:visited {
-    color: var(--weak-text-color);
-    text-decoration: none;
-}
+    & a, & a:visited {
+        color: var(--weak-text-color);
+        text-decoration: none;
+    }
 
-nav svg {
-    color: var(--weak-text-color);
-    width: 1rem;
-}
+    & svg {
+        color: var(--weak-text-color);
+        width: 1rem;
+    }
 
-nav a:hover {
-    background-color: var(--hover-color);
+    & a:hover {
+        background-color: var(--hover-color);
+    }
 }
 
 .menu-toggle {
     display: none;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .menu-toggle {
         display: flex;
         align-items: center;
@@ -57,26 +57,28 @@ nav a:hover {
         width: 2rem;
         user-select: none;
         cursor: pointer;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        & svg.close {
+            display: none;
+        }
     }
 
-    .menu-toggle svg {
-        width: 100%;
-        height: 100%;
-    }
+    .menu-open {
+        & nav {
+            left: 0;
+        }
 
-    .menu-toggle svg.close {
-        display: none;
-    }
+        & .menu-toggle svg.close {
+            display: initial;
+        }
 
-    .menu-open nav {
-        left: 0;
-    }
-
-    .menu-open .menu-toggle svg.close {
-        display: initial;
-    }
-
-    .menu-open .menu-toggle svg.open {
-        display: none;
+        & .menu-toggle svg.open {
+            display: none;
+        }
     }
 }

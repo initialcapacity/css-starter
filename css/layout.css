@@ -19,52 +19,52 @@ body > header {
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--body-padding);
+
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 0;
+        list-style: none;
+
+        &:not(:last-child) {
+            margin: 0;
+        }
+    }
+
+    & li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        line-height: 1;
+    }
+
+    & svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        --icon-color: var(--header-text-color);
+
+        &.logo {
+            width: 4rem;
+            height: 3rem;
+        }
+    }
+
+    & h1 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    & .button, & button {
+        --background: var(--header-background-color);
+        --border: var(--header-text-color);
+    }
 }
 
-body > header ul {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    padding: 0;
-    list-style: none;
-}
-
-body > header ul:not(:last-child) {
-    margin: 0;
-}
-
-body > header li {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    line-height: 1;
-}
-
-body > header svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    flex-shrink: 0;
-    --icon-color: var(--header-text-color);
-}
-
-body > header svg.logo {
-    width: 4rem;
-    height: 3rem;
-}
-
-body > header h1 {
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-body > header .button, body > header button {
-    --background: var(--header-background-color);
-    --border: var(--header-text-color);
-}
-
-nav {
+body > nav {
     background-color: var(--card-background-color);
     grid-area: sidebar;
     border-right: 1px solid var(--weak-border-color);
@@ -77,10 +77,10 @@ main {
 
 section {
     padding: var(--body-padding);
-}
 
-section:not(:last-child) {
-    border-bottom: 1px solid var(--weak-border-color);
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--weak-border-color);
+    }
 }
 
 footer {
@@ -96,15 +96,15 @@ footer {
     background-image: var(--inverted-ic-logo);
     background-repeat: no-repeat;
     background-position: right var(--body-padding) bottom var(--body-padding);
-}
 
-footer a, footer a:visited {
-    color: var(--inverted-text-color);
-}
+    & a, & a:visited {
+        color: var(--inverted-text-color);
+    }
 
-footer ul {
-    padding: 0;
-    list-style: none;
+    & ul {
+        padding: 0;
+        list-style: none;
+    }
 }
 
 @media screen and (max-width: 800px) {

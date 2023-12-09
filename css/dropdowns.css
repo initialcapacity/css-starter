@@ -1,52 +1,51 @@
 .dropdown {
     position: relative;
     cursor: pointer;
-}
 
-.dropdown .button {
-    text-transform: none;
-    text-decoration: none;
-    padding-right: 2.25rem;
-    background-image: var(--white-expand-image);
-    background-repeat: no-repeat;
-    background-position: right .5rem center;
-}
+    & .button {
+        text-transform: none;
+        text-decoration: none;
+        padding-right: 2.25rem;
+        background-image: var(--white-expand-image);
+        background-repeat: no-repeat;
+        background-position: right .5rem center;
+    }
 
-.dropdown ul.menu {
-    display: none;
-    visibility: hidden;
+    & ul.menu {
+        display: none;
+        visibility: hidden;
 
-    width: max-content;
-    max-width: 14rem;
-    box-shadow: var(--box-shadow);
-    background-color: var(--dropdown-menu-background);
-    border-radius: var(--border-radius);
-    border-top-left-radius: 0;
-}
+        width: max-content;
+        max-width: 14rem;
+        box-shadow: var(--box-shadow);
+        background-color: var(--dropdown-menu-background);
+        border-radius: var(--border-radius);
+        border-top-left-radius: 0;
 
-.dropdown .menu a {
-    padding: .75rem 1rem;
-    width: 100%;
-    line-height: 1.5;
-    color: var(--text-color);
-    text-decoration: none;
-}
+        & a {
+            padding: .75rem 1rem;
+            width: 100%;
+            line-height: 1.5;
+            color: var(--text-color);
+            text-decoration: none;
 
-.dropdown .menu a:hover {
-    background-color: var(--card-background-color);
-}
+            &:hover {
+                background-color: var(--card-background-color);
+            }
+        }
+    }
 
-.dropdown:focus-within .button, .dropdown:hover .button,
-.dropdown:focus-within button, .dropdown:hover button {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
+    &:focus-within .button, &:hover .button {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 
-.dropdown:focus-within .menu, .dropdown:hover .menu {
-    visibility: visible;
-    display: block;
+    &:focus-within .menu, &:hover .menu {
+        visibility: visible;
+        display: block;
 
-    position: absolute;
-    left: 0;
-    top: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
 }

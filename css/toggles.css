@@ -3,6 +3,7 @@
     --toggle-width: calc(1.8 * var(--toggle-height));
     --toggle-padding: .25rem;
     --indicator-size: calc(var(--toggle-height) - 2 * var(--toggle-padding));
+
     appearance: none;
     position: relative;
     cursor: pointer;
@@ -16,27 +17,31 @@
     box-shadow: var(--inset-box-shadow);
 
     transition: 0.1s linear background;
-}
 
-.toggle input:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: var(--toggle-padding);
-    left: var(--toggle-padding);
-    width: var(--indicator-size);
-    height: var(--indicator-size);
-    background: var(--background-color);
-    border-radius: var(--indicator-size);
-    transition: 0.1s linear transform;
-    transform: translateX(0);
-    box-shadow: var(--box-shadow);
-}
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
 
-.toggle input:checked {
-    background-color: var(--toggle-background-on);
-}
+        top: var(--toggle-padding);
+        left: var(--toggle-padding);
+        width: var(--indicator-size);
+        height: var(--indicator-size);
 
-.toggle input:checked:before {
-    transform: translateX(calc(var(--toggle-width) - var(--indicator-size) - 2 * var(--toggle-padding)));
+        background: var(--background-color);
+        border-radius: var(--indicator-size);
+        box-shadow: var(--box-shadow);
+
+        transition: 0.1s linear transform;
+        transform: translateX(0);
+
+    }
+
+    &:checked {
+        background-color: var(--toggle-background-on);
+    }
+
+    &:checked:before {
+        transform: translateX(calc(var(--toggle-width) - var(--indicator-size) - 2 * var(--toggle-padding)));
+    }
 }

@@ -1,16 +1,18 @@
 dialog {
+    --inner-padding: 2rem;
     border: none;
     padding: 0;
     border-radius: var(--border-radius);
 
     width: clamp(50vw, 40rem, calc(100vw - 2 * var(--body-padding)));
-}
 
-dialog > article, dialog > footer {
-    padding: 2rem;
-}
+    & > article {
+        padding: var(--inner-padding);
+    }
 
-dialog > footer {
-    border-top: 1px solid var(--weak-border-color);
-    background-color: var(--card-background-color);
+    & > footer {
+        padding: var(--inner-padding);
+        border-top: 1px solid var(--weak-border-color);
+        background-color: var(--card-background-color);
+    }
 }

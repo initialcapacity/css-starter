@@ -1,36 +1,38 @@
 [data-tooltip] {
-    --caret-height: .4rem;
+    --caret-height: .5rem;
 
     color: var(--text-color);
     cursor: pointer;
     text-decoration: underline;
     position: relative;
-}
 
-[data-tooltip]:hover:before, [data-tooltip]:focus-within:before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + var(--caret-height));
+    &:hover, &:focus-within {
+        &:before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + var(--caret-height));
 
-    padding: .33rem .5rem;
-    border-radius: var(--border-radius);
-    background-color: var(--inverted-background-color);
-    width: max-content;
-    max-width: 15rem;
+            padding: .33rem .5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--inverted-background-color);
+            width: max-content;
+            max-width: 15rem;
 
-    color: var(--inverted-text-color);
-    font-size: .8rem;
-    line-height: 1.5;
-}
+            color: var(--inverted-text-color);
+            font-size: .8rem;
+            line-height: 1.5;
+        }
 
 
-[data-tooltip]:hover:after, [data-tooltip]:focus-within:after {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 1rem;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: calc(100% + 1px);
+            left: 1rem;
 
-    border-left: var(--caret-height) solid transparent;
-    border-right: var(--caret-height) solid transparent;
-    border-top: var(--caret-height) solid var(--inverted-background-color);
+            border-left: var(--caret-height) solid transparent;
+            border-right: var(--caret-height) solid transparent;
+            border-top: var(--caret-height) solid var(--inverted-background-color);
+        }
+    }
 }
