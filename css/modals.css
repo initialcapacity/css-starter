@@ -1,7 +1,6 @@
 dialog {
     border: none;
     padding: 0;
-    border-radius: var(--border-radius);
 
     width: clamp(50vw, 40rem, calc(100vw - 2 * var(--body-padding)));
 }

@@ -20,8 +20,6 @@
     max-width: 14rem;
     box-shadow: var(--box-shadow);
     background-color: var(--dropdown-menu-background);
-    border-radius: var(--border-radius);
-    border-top-left-radius: 0;
 }
 
 .dropdown .menu a {

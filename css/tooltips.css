@@ -13,7 +13,6 @@
     bottom: calc(100% + var(--caret-height));
 
     padding: .33rem .5rem;
-    border-radius: var(--border-radius);
     background-color: var(--inverted-background-color);
     width: max-content;
     max-width: 15rem;

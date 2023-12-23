@@ -12,7 +12,6 @@ button, .button {
     padding: 0 1rem;
     border: 1px solid var(--border);
     background-color: var(--background);
-    border-radius: var(--border-radius);
 
     cursor: pointer;
     color: var(--text-color);

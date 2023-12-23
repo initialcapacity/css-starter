@@ -63,7 +63,6 @@ pre, code {
     font-size: .9rem;
     width: 100%;
     background-color: var(--card-background-color);
-    border-radius: var(--border-radius);
     border: 1px solid var(--weak-border-color);
 }
 

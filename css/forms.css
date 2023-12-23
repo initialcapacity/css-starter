@@ -72,7 +72,6 @@ input, select {
 
     padding: .75rem;
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
     color: var(--text-color);
     background-color: var(--background-color);
 }
