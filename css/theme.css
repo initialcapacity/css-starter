@@ -36,6 +36,10 @@
     --button-loader-primary: url("../images/loader-white.svg");
     --button-loader-secondary: url("../images/loader-primary.svg");
 
+    --flash-background-color: var(--primary);
+    --flash-text-color: var(--white);
+    --flash-alert-color: var(--alert);
+
     --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     --inset-box-shadow: 0 1px 3px rgba(0, 0, 0, .14) inset;
 

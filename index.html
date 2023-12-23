@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./css/tooltips.css">
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/toggles.css">
+    <link rel="stylesheet" href="./css/flash.css">
 
     <link rel="icon" href="favicon.ico" sizes="48x48">
     <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml"/>
@@ -146,6 +147,14 @@
                 Toggles
             </a>
         </li>
+        <li>
+            <a href="#flash-messages">
+                <svg>
+                    <use xlink:href="images/icons.svg#flash"></use>
+                </svg>
+                Flash messages
+            </a>
+        </li>
     </ul>
 
     <h2>Patterns</h2>
@@ -197,7 +206,7 @@
             These are some great resources to build and maintain clean CSS codebases.
         </p>
 
-        <ul>
+        <ul class="bulleted">
             <li><a href="https://www.joshwcomeau.com/tutorials/css/">Josh Comeau</a></li>
             <li><a href="https://css-tricks.com/guides/">CSS Tricks</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs</a></li>
@@ -222,13 +231,13 @@
             anim id est laborum.
         </p>
 
-        <ol>
+        <ol class="numbered">
             <li>Some</li>
             <li>list</li>
             <li>items</li>
         </ol>
 
-        <ul>
+        <ul class="bulleted">
             <li>Some</li>
             <li>list</li>
             <li>items</li>
@@ -483,6 +492,15 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
         </fieldset>
     </section>
 
+    <section id="flash-messages">
+        <h1>Flash messages</h1>
+
+        <fieldset>
+            <button onclick="flash('This is a flash message')">Display message</button>
+            <button onclick="flash('This is an alert message', true)" class="alert">Display alert</button>
+        </fieldset>
+    </section>
+
     <section id="theming">
         <h1>Theming</h1>
 
@@ -610,10 +628,24 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
     </span>
 </footer>
 
+<ul class="flash-container" data-flash-container></ul>
+
 <script>
     document.querySelectorAll("nav a").forEach(element => {
         element.addEventListener("click", () => document.querySelector('body').classList.remove('menu-open'))
     })
+
+    const flashContainer = document.querySelector("[data-flash-container]");
+
+    const flash = (message, error = false) => {
+        const messageElement = document.createElement("li");
+        messageElement.classList.add("message");
+        if (error) {
+            messageElement.classList.add("error")
+        }
+        messageElement.innerText = message;
+        flashContainer.appendChild(messageElement);
+    }
 </script>
 </body>
 </html>

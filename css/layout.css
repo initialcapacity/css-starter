@@ -25,9 +25,6 @@ body > header ul {
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    padding: 0;
-    list-style: none;
 }
 
 body > header ul:not(:last-child) {
@@ -102,9 +99,8 @@ footer a, footer a:visited {
     color: var(--inverted-text-color);
 }
 
-footer ul {
-    padding: 0;
-    list-style: none;
+footer li {
+    margin-bottom: .5rem;
 }
 
 @media screen and (max-width: 800px) {

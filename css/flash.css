@@ -1,0 +1,43 @@
+.flash-container {
+    --background: var(--flash-background-color);
+    --color: var(--flash-text-color);
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flash-container .message {
+    padding: 1rem 1.5rem;
+    color: var(--color);
+    background-color: var(--background);
+
+    animation: hideMessage .1s ease-in 5s;
+    animation-fill-mode: forwards;
+}
+
+.flash-container .message.error {
+    --background: var(--flash-alert-color);
+}
+
+@keyframes hideMessage {
+    0% {
+        opacity: 1;
+        height: auto;
+    }
+
+    99% {
+        opacity: 0;
+        height: auto;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+    }
+}
