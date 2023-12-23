@@ -1,7 +1,7 @@
 button, .button {
     --background: var(--button-background-color);
     --text-color: var(--button-text-color);
-    --border: var(--button-border-color);
+    --border: var(--button-background-color);
     --loader: var(--button-loader-primary);
 
     display: flex;
@@ -44,6 +44,7 @@ button.loading, .button.loading {
 
 button.secondary, .button.secondary {
     --background: var(--background-color);
+    --border: var(--button-border-color);
     --text-color: var(--button-border-color);
     --loader: var(--button-loader-secondary);
 }
