@@ -5,6 +5,7 @@
     --dark-gray: #4D4D4D;
     --darkest-gray: #454545;
     --black: #333333;
+    --deep-black: #222222;
     --primary: #196EC2;
     --alert: #DF2020;
 
@@ -65,8 +66,7 @@ html {
         --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
 
-        --inverted-background-color: var(--light-gray);
-        --inverted-text-color: var(--black);
+        --inverted-background-color: var(--deep-black);
 
         --weak-border-color: var(--dark-gray);
         --border-color: var(--light-gray);
@@ -79,7 +79,6 @@ html {
         --dropdown-menu-background: var(--black);
         --toggle-background-off: var(--dark-gray);
 
-        --inverted-ic-logo: url("../images/ic-logo-black.svg");
         --expand-image: url("../images/expand-white.svg");
     }
 }
