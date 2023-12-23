@@ -14,7 +14,7 @@
 .flash-container .message {
     padding: 1rem 1.5rem;
     color: var(--color);
-    background-color: var(--background);
+    background-color: color-mix(in srgb, var(--background) 85%, transparent);
 
     animation: hideMessage .1s ease-in 5s;
     animation-fill-mode: forwards;
