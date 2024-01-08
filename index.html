@@ -183,6 +183,14 @@
                 Favicon
             </a>
         </li>
+        <li>
+            <a href="#sidebar">
+                <svg>
+                    <use xlink:href="images/icons.svg#sidebar"></use>
+                </svg>
+                Sidebar
+            </a>
+        </li>
     </ul>
 </nav>
 <main>
@@ -400,7 +408,7 @@
         <h1>Cards</h1>
 
         <div class="card-list">
-            <div class="card">
+            <article class="card">
                 <h2>Lorem ipsum</h2>
 
                 <p>
@@ -409,8 +417,8 @@
                     consequat, vulputate blandit nunc tempor. Integer purus augue, fringilla eu molestie in, consequat
                     at turpis.
                 </p>
-            </div>
-            <div class="card">
+            </article>
+            <article class="card">
                 <h2>Orci varius</h2>
 
                 <p>
@@ -421,8 +429,8 @@
                     sagittis velit. Vestibulum lacinia, diam vitae sodales euismod, nulla diam molestie velit, vitae
                     iaculis neque nisl sit amet metus. Cras vehicula auctor fermentum.
                 </p>
-            </div>
-            <div class="card">
+            </article>
+            <article class="card">
                 <h2>Mauris felis</h2>
 
                 <p>
@@ -431,7 +439,7 @@
                     Suspendisse malesuada eleifend arcu congue tempus. Pellentesque sed dictum ex. Pellentesque orci mi,
                     vestibulum quis enim at, posuere iaculis neque.
                 </p>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -607,13 +615,68 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
         <h1>Favicon</h1>
 
         <p>
-            This site uses an SVG favicon for modern browsers and provides an ico fallback for
+            The starter uses an SVG favicon for modern browsers and provides an ico fallback for
             <a href="https://caniuse.com/link-icon-svg">browsers without SVG favicon support</a> (like Safari and IE).
             The <a href="favicon.svg">SVG favicon</a> uses a <code>@media (prefers-color-scheme: dark)</code> query to
             serve a different color favicon depending on the user's color scheme. The
             <a href="favicon.ico">ico favicon</a> consists of a dark icon on a light background so that it displays well
             on any background color.
         </p>
+    </section>
+
+    <section id="sidebar">
+        <h1>Sidebar</h1>
+
+        <p>
+            The starter's sidebar follows a pattern seen in many apps. On wide screens the sidebar is permanently
+            displayed on the left side of the page and the page's content is displayed to its right. On narrower screens
+            the sidebar is hidden by default, and is only displayed when a user clicks on the menu icon.
+        </p>
+
+        <p>
+            This layout is achieved with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">CSS Grid</a>,
+            in particular <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas">grid template
+            areas</a>. The default layout defines areas for each of the top-level layout elements, placing the
+            <code>nav</code> in the <code>sidebar</code> area.
+        </p>
+
+        <pre><code>body {
+    ...
+    grid-template-areas: 'header header'
+                         'sidebar main'
+                         'footer footer';
+}
+
+nav {
+    grid-area: sidebar;
+}</code></pre>
+
+        <p>
+            On small screens, we omit the sidebar from the grid layout and position the sidebar absolutely, using the
+            <code>left</code> property to toggle its visibility.
+        </p>
+
+        <pre><code>@media screen and (max-width: 800px) {
+    body {
+        ...
+        grid-template-areas: 'header'
+                             'main'
+                             'footer';
+    }
+
+    nav {
+        grid-area: unset;
+        position: absolute;
+        top: var(--header-height);
+        bottom: 0;
+        left: calc(-1 * var(--nav-width));
+    }
+
+    .menu-open nav {
+        left: 0;
+    }
+}
+</code></pre>
     </section>
 </main>
 <footer>

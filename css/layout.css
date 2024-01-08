@@ -114,7 +114,6 @@ footer li {
     nav {
         grid-area: unset;
         position: absolute;
-        width: var(--nav-width);
         top: var(--header-height);
         bottom: 0;
         left: calc(-1 * var(--nav-width));

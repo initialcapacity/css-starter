@@ -1,5 +1,6 @@
 nav {
     padding: var(--body-padding) 0;
+    width: var(--nav-width);
 }
 
 nav ul {
