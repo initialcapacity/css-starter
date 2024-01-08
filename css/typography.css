@@ -30,7 +30,7 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
     margin-top: 2rem;
 }
 
-p, li {
+p {
     line-height: 1.5;
 }
 
@@ -46,6 +46,7 @@ ol.numbered, ul.bulleted {
     padding-left: 2rem;
 
     & li {
+        line-height: 1.5;
         margin-bottom: .5rem;
     }
 }
