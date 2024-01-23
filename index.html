@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/toggles.css">
     <link rel="stylesheet" href="./css/flash.css">
+    <link rel="stylesheet" href="./css/accordions.css">
 
     <link rel="icon" href="favicon.ico" sizes="48x48">
     <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml"/>
@@ -153,6 +154,14 @@
                     <use xlink:href="images/icons.svg#flash"></use>
                 </svg>
                 Flash messages
+            </a>
+        </li>
+        <li>
+            <a href="#accordions">
+                <svg>
+                    <use xlink:href="images/icons.svg#accordion"></use>
+                </svg>
+                Accordions
             </a>
         </li>
     </ul>
@@ -507,6 +516,40 @@ with &lt;pre&gt; and &lt;code&gt;</code></pre>
             <button onclick="flash('This is a flash message')">Display message</button>
             <button onclick="flash('This is an alert message', true)" class="alert">Display alert</button>
         </fieldset>
+    </section>
+
+    <section id="accordions">
+        <h1>Accordions</h1>
+
+        <p>
+            If a group of <code>&lt;details&gt;</code> elements all have the same <code>name</code> attribute, most
+            browsers will only allow one of them to be open at a time.
+            Support for this is <a href="https://caniuse.com/mdn-html_elements_details_name">currently low</a>, but is
+            improving.
+        </p>
+
+        <details name="accordion-demo">
+            <summary>
+                This is an accordion summary
+            </summary>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consequat, enim id efficitur porta, diam
+                sem porta sapien, ut dignissim velit erat quis sapien.
+                Nullam vulputate enim placerat tortor consequat, vulputate blandit nunc tempor.
+                Integer purus augue, fringilla eu molestie in, consequat at turpis.
+            </p>
+        </details>
+
+        <details name="accordion-demo">
+            <summary>
+                This is another accordion summary
+            </summary>
+            <ul class="bulleted">
+                <li>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                <li>Phasellus vel pulvinar orci, ac auctor urna.</li>
+                <li>Nulla aliquam enim rutrum, auctor urna at, facilisis metus.</li>
+            </ul>
+        </details>
     </section>
 
     <section id="theming">
