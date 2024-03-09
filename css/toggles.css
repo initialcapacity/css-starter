@@ -1,7 +1,7 @@
 .toggle input {
     --toggle-height: 2rem;
     --toggle-width: calc(1.8 * var(--toggle-height));
-    --toggle-padding: .25rem;
+    --toggle-padding: calc(var(--toggle-height) / 8);
     --indicator-size: calc(var(--toggle-height) - 2 * var(--toggle-padding));
     appearance: none;
     position: relative;
