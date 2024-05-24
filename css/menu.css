@@ -1,6 +1,13 @@
 nav {
-    padding: var(--body-padding) 0;
     width: var(--nav-width);
+}
+
+nav .scrollable {
+    position: sticky;
+    top: 0;
+    padding: var(--body-padding) 0;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 nav ul {
